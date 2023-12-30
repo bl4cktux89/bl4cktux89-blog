@@ -24,11 +24,15 @@ Para um melhor entendimento do artigo, agora vamos conhecer um pouco dos modelos
 
 O Modelo TCP/IP é composto por uma pilha com camadas interativas, onde cada camada interage com a camada superior e inferior de forma hierárquica, isso significa que protocolos de camadas superiores dependem das inferiores.
 
+![Modelo TCP/IP](./.resources/tcp-ip-model.png)
+
 Camadas do Modelo TCP/IP:
 1. Acesso à Rede: Fornece suporte para todos os padrões proprietários.
 2. Internet (ou Rede): Suporta o Protocolo de Internet (IP). Exemplos de Protocolos: ARP, RARP e ICMP.
 3. Transporte: Gerencia a sessão de comunicação entre computadores. A camada de Transporte faz o uso dos Protocolos TCP (Transmission Control Protocol) e UDP (User Datagram Protocol).
 4. Aplicação: Protocolos de aplicativos TCP/IP e interface entre usuário e aplicação. Exemplos de Protocolos: HTTP, SMTP, FTP, SSH, etc.
+
+---
 
 ### Modelo OSI
 
@@ -38,6 +42,8 @@ Camadas do Modelo TCP/IP:
 * Regras de construção de redes
 * Facilitar o aprendizado
 * Permitir implantação de novas tecnologias
+
+![Modelo OSI](./.resources/osi-model.png)
 
 O modelo em questão é estruturado em 7 camadas:
 1. Física: especificações elétricas e mecânicas, representação dos bits.
@@ -56,15 +62,19 @@ Protocolos específicos são associados a cada camada para realizar suas funcion
 
 ### Comparações entre o Modelo OSI e o Modelo TCP/IP
 
+![Comparativo entre os modelos OSI e TCP/IP](./.resources/osi-vs-tcp-ip.png)
+
 Semelhanças: Camadas de Transporte têm a mesma função nos dois modelos.
 Diferenças: Camada de Enlace do TCP/IP combina funcionalidades das camadas de Enlace e Física do OSI. Camada de Aplicação do TCP/IP combina funcionalidades das camadas de Aplicação, Apresentação e Sessão do OSI.
 Deficiência do OSI: Complexidade de implementação e repetição de funcionalidades.
 Deficiência do TCP/IP: Falta de clareza em conceitos e não abrangência de outras pilhas de protocolos.
 Por esses motivos, um modelo híbrido de 5 camadas foi proposto por Tanenbaum para melhorar o modelo TCP/IP e retirar os excessos do modelo OSI.
 
-## Conceitos importantes
+## Nivelamento de conhecimento
 
-![Cabeçalho do Protocolo IP](./.resources/tcp-header.png)
+
+
+## Problemas resolvidos pelo protocolo IP
 
 Mas afinal, do ponto de vista técnico, por que o protocolo IP foi desenvolvido?
 
@@ -79,7 +89,7 @@ O exemplo abaixo demonstra de forma simplificada a relação entre o protocolo I
 1. O módulo TCP forneceria os endereços e outros parâmetros no cabeçalho de internet como argumentos para o módulo de internet (Camada de Transporte).
 2. O módulo de internet então criaria o pacote de internet e chamaria a interface de rede local para transmiti-lo (Camada de Enlace).
 
-
+## 
 
 > 💡 O protocolo IP implementa duas funções básicas: endereçamento e fragmentação.
 
